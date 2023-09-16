@@ -12,6 +12,7 @@ import { useRouter } from 'next/router';
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const router = useRouter();
+  console.log(router.pathname);
 
   const handleOpen = () => {
     setOpenMenu(true);
@@ -32,7 +33,7 @@ function Navbar() {
       <ul className={`${styles.navbarOptions} ${openMenu && styles.open}`}>
         {navbarLinks.map((navbarLink, index) => (
           <li key={index} className={styles.list}>
-            <Link onClick={handleClose} href={navbarLink.route} className={`${styles.navbarHover} ${styles.links}`}>
+            <Link onClick={handleClose} href={navbarLink.route} className={`${styles.navbarHover} ${styles.links} ${router.pathname === navbarLink.route && styles.active}`}>
               {navbarLink.title}
             </Link>
           </li>
