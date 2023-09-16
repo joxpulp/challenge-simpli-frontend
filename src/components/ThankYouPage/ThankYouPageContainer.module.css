@@ -1,0 +1,13 @@
+.thankYouPageContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+  align-items: center;
+  justify-items: center;
+}
+
+.thankYouPageIcon {
+  color: var(--primary-color);
+}

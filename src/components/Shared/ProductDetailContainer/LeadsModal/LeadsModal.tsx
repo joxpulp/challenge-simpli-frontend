@@ -8,6 +8,7 @@ import { api } from '@/utils/api/api';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { LeadReponse } from '@/utils/types/leads.types';
+import { ProductTypeEnum } from '@/utils/enums/productType.enum';
 
 interface LeadsModalProps {
   productId: string;
@@ -23,8 +24,8 @@ interface initialValues {
 
 function LeadsModal({ productId, productName }: LeadsModalProps) {
   const router = useRouter();
+  const from = router.pathname.includes(ProductTypeEnum.MOTO) ? ProductTypeEnum.MOTO : ProductTypeEnum.ACCE;
   const [loading, setLoading] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
   const initialValues: initialValues = {
     name: '',
     lastname: '',
@@ -47,23 +48,22 @@ function LeadsModal({ productId, productName }: LeadsModalProps) {
       helpers.resetForm();
       if (_id) {
         setLoading(false);
-        setOpenModal(false);
         router.push({
           pathname: '/typ',
           query: {
-            lead_id: _id
+            lead_id: _id,
+            from
           }
         });
       }
     } catch (error) {
       setLoading(false);
-      setOpenModal(false);
       throw Error('Leads submit failed');
     }
   };
 
   return (
-    <LeadsModalWrapper openModal={openModal} setOpenModal={setOpenModal}>
+    <LeadsModalWrapper>
       <Formik initialValues={initialValues} validationSchema={schemaValidation} onSubmit={handleSubmit} validateOnChange validateOnBlur={false}>
         <Form className={styles.leadsFormBox}>
           <Input disabled={loading} label="Name" inputName="name" placeholder="Your name" />

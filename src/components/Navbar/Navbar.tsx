@@ -7,9 +7,11 @@ import { MdClose } from 'react-icons/md';
 import Link from 'next/link';
 import { useState } from 'react';
 import navbarLinks from './texts';
+import { useRouter } from 'next/router';
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
+  const router = useRouter();
 
   const handleOpen = () => {
     setOpenMenu(true);
@@ -23,7 +25,7 @@ function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.navbarLogoMenu}>
         {openMenu ? <MdClose onClick={handleClose} size={22} className={styles.navbarMobileMenuIcon} /> : <HiOutlineMenu onClick={handleOpen} size={22} className={styles.navbarMobileMenuIcon} />}
-        <div className={styles.navbarLogo}>
+        <div className={styles.navbarLogo} onClick={() => router.push('/')}>
           <Image unoptimized src="/simplimuv-logo.png" fill style={{ objectFit: 'cover', position: 'absolute' }} alt="simpli logo" />
         </div>
       </div>

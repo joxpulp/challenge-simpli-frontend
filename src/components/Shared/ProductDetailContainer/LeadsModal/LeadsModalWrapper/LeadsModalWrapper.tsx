@@ -3,19 +3,17 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { Exo } from 'next/font/google';
 import styles from './LeadsModalWrapper.module.css';
 import { AiOutlineClose } from 'react-icons/ai';
-import { Dispatch, ReactNode, SetStateAction } from 'react';
+import { ReactNode } from 'react';
 
 const exo = Exo({ subsets: ['latin'], weight: ['400'] });
 
 interface LeadsModalWrapperProps {
   children: ReactNode;
-  openModal: boolean;
-  setOpenModal: Dispatch<SetStateAction<boolean>>;
 }
 
-function LeadsModalWrapper({ children, openModal, setOpenModal }: LeadsModalWrapperProps) {
+function LeadsModalWrapper({ children }: LeadsModalWrapperProps) {
   return (
-    <Dialog.Root open={openModal} onOpenChange={setOpenModal}>
+    <Dialog.Root>
       <Dialog.Trigger asChild className={styles.leadsModalWrapperButton}>
         <Button fullWidth extraClass={`${exo.className}`} buttonStyle="secondary">
           Request information
