@@ -1,0 +1,40 @@
+.productCard {
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  border-radius: 8px;
+  padding: 23px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  text-align: center;
+  box-shadow: 0px 0px 5px 3px rgba(130, 130, 130, 0.183);
+}
+
+.productCard:hover {
+  transform: scale(0.98);
+}
+
+.productCardImage {
+  position: relative;
+  width: 100%;
+  height: 210px;
+}
+
+.productCardTitle {
+  font-size: 18px;
+}
+
+.productCardSubtitle {
+  font-size: 15px;
+}
+
+@media (max-width: 500px) {
+  .productCardImage {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+}

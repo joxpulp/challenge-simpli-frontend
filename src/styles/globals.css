@@ -1,8 +1,13 @@
 :root {
   --primary-color: #903ef7;
+  --primary-color-offset: #caa3fa;
   --secondary-color: #180a2a;
+  --secondary-color-offset: #7f53bc;
   --white: #fff;
   --black: #000;
+  --soft-gray: #d4d8e1;
+  --disabled-gray: #f7f7f9;
+  --disabled-gray-2: #b3bac9;
 }
 
 * {

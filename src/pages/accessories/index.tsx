@@ -1,5 +1,12 @@
+import ProductContainer from '@/components/Shared/ProductContainer/ProductContainer';
+import ProductContainerGrid from '@/components/Shared/ProductContainerGrid/ProductContainerGrid';
+
 function Accessories() {
-  return <div>Accessories Main</div>;
+  return (
+    <ProductContainer>
+      <ProductContainerGrid>Prueba</ProductContainerGrid>
+    </ProductContainer>
+  );
 }
 
 export default Accessories;

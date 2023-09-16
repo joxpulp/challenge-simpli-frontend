@@ -1,0 +1,13 @@
+.productContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 750px) {
+  .productContainer {
+    gap: 20px;
+  }
+}

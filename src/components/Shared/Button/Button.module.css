@@ -1,0 +1,46 @@
+.button {
+  padding: 15px;
+  width: fit-content;
+  font-size: 15px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+  &.buttonFull {
+    width: 100%;
+  }
+}
+
+.button:hover {
+  opacity: 0.6;
+}
+
+.button:active {
+  opacity: 0.8;
+}
+
+.button:disabled {
+  background-color: var(--disabled-gray);
+  color: var(--disabled-gray-2);
+  cursor: not-allowed;
+}
+
+.buttonPrimary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.buttonPrimary:focus {
+  box-shadow: 0px 0px 0px 3px var(--primary-color-offset);
+}
+
+.buttonSecondary {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.buttonSecondary:focus {
+  box-shadow: 0px 0px 0px 3px var(--secondary-color-offset);
+}

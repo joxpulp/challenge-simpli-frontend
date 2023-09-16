@@ -45,13 +45,14 @@
   color: var(--primary-color);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .navbarMobileMenuIcon {
     display: block;
     cursor: pointer;
   }
 
   .navbarOptions {
+    z-index: 999;
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
     padding: 0px 10px;
     overflow: hidden;

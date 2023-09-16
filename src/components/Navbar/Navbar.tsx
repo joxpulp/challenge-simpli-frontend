@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './styles.module.css';
+import styles from './Navbar.module.css';
 import { LuUser2 } from 'react-icons/lu';
 import { LiaShoppingBasketSolid } from 'react-icons/lia';
 import { HiOutlineMenu } from 'react-icons/hi';
