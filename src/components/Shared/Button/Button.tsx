@@ -7,11 +7,12 @@ interface ButtonProps {
   fullWidth?: boolean;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
+  extraClass?: string;
   onClick?: () => void;
 }
 
-function Button({ children, buttonStyle = 'primary', fullWidth, disabled, type = 'button', onClick }: ButtonProps) {
-  const baseClasses = `${styles.button} ${fullWidth && styles.buttonFull}`;
+function Button({ children, buttonStyle = 'primary', fullWidth, disabled, type = 'button', extraClass, onClick }: ButtonProps) {
+  const baseClasses = `${styles.button} ${fullWidth && styles.buttonFull} ${extraClass}`;
   return {
     primary: (
       <button type={type} disabled={disabled} className={`${baseClasses} ${styles.buttonPrimary}`} onClick={onClick}>

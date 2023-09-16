@@ -11,6 +11,23 @@
   &.buttonFull {
     width: 100%;
   }
+  &.buttonPrimary {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+
+  &.buttonPrimary:focus {
+    box-shadow: 0px 0px 0px 3px var(--primary-color-offset);
+  }
+
+  &.buttonSecondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+  }
+
+  &.buttonSecondary:focus {
+    box-shadow: 0px 0px 0px 3px var(--secondary-color-offset);
+  }
 }
 
 .button:hover {
@@ -25,22 +42,4 @@
   background-color: var(--disabled-gray);
   color: var(--disabled-gray-2);
   cursor: not-allowed;
-}
-
-.buttonPrimary {
-  background-color: var(--primary-color);
-  color: var(--white);
-}
-
-.buttonPrimary:focus {
-  box-shadow: 0px 0px 0px 3px var(--primary-color-offset);
-}
-
-.buttonSecondary {
-  background-color: var(--secondary-color);
-  color: var(--white);
-}
-
-.buttonSecondary:focus {
-  box-shadow: 0px 0px 0px 3px var(--secondary-color-offset);
 }

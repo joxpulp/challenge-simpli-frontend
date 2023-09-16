@@ -1,10 +1,7 @@
-import { useRouter } from 'next/router';
+import ProductDetailContainer from '@/components/Shared/ProductDetailContainer/ProductDetailContainer';
 
 function MotorcycleDetailPage() {
-  const router = useRouter();
-  const { slug } = router.query;
-
-  return <div>Motorcycle Detail {slug}</div>;
+  return <ProductDetailContainer />;
 }
 
 export default MotorcycleDetailPage;
