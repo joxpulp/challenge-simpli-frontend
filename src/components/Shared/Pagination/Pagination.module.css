@@ -1,0 +1,19 @@
+.paginationContainer {
+  display: flex;
+  gap: 8px;
+  .active {
+    background-color: var(--secondary-color) !important;
+    color: var(--white) !important;
+  }
+  .numbers {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  .paginationContainer {
+    .numbers {
+      display: none;
+    }
+  }
+}

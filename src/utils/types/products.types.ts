@@ -18,3 +18,10 @@ export interface ProductResponse {
   products: Product[];
   paging: Paging;
 }
+
+export interface ProductsPageSSRProps {
+  products: Product[];
+  totalPages: number;
+  currentPage: number;
+  limit: number;
+}

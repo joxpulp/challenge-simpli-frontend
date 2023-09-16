@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 
 interface ButtonProps {
   children: ReactNode;
-  buttonStyle?: 'primary' | 'secondary';
+  buttonStyle?: 'primary' | 'secondary' | 'tertiary';
   fullWidth?: boolean;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
@@ -21,6 +21,11 @@ function Button({ children, buttonStyle = 'primary', fullWidth, disabled, type =
     ),
     secondary: (
       <button type={type} disabled={disabled} className={`${baseClasses} ${styles.buttonSecondary}`} onClick={onClick}>
+        {children}
+      </button>
+    ),
+    tertiary: (
+      <button type={type} disabled={disabled} className={`${baseClasses} ${styles.buttonTertiary}`} onClick={onClick}>
         {children}
       </button>
     )

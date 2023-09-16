@@ -28,6 +28,11 @@
   &.buttonSecondary:focus {
     box-shadow: 0px 0px 0px 3px var(--secondary-color-offset);
   }
+
+  &.buttonTertiary {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+  }
 }
 
 .button:hover {
@@ -39,7 +44,16 @@
 }
 
 .button:disabled {
+  border: 1px solid var(--disabled-gray-2);
   background-color: var(--disabled-gray);
   color: var(--disabled-gray-2);
   cursor: not-allowed;
+}
+
+.button:disabled:hover {
+  opacity: 1;
+}
+
+.button:disabled:active {
+  opacity: 1;
 }
