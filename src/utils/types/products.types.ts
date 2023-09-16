@@ -32,4 +32,5 @@ export interface ProductDetailSSRProps {
   price: number;
   currency: string;
   description: string;
+  productId: string;
 }

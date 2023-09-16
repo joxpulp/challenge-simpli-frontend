@@ -3,8 +3,8 @@ import { api } from '@/utils/api/api';
 import { Product, ProductDetailSSRProps } from '@/utils/types/products.types';
 import { GetServerSidePropsContext } from 'next';
 
-function MotorcycleDetailPage({ image, name, price, currency, description }: ProductDetailSSRProps) {
-  return <ProductDetailContainer imageUrl={image} title={name} price={price} currency={currency} description={description} />;
+function MotorcycleDetailPage({ image, name, price, currency, description, productId }: ProductDetailSSRProps) {
+  return <ProductDetailContainer imageUrl={image} title={name} price={price} currency={currency} description={description} productId={productId} />;
 }
 
 export default MotorcycleDetailPage;
@@ -14,10 +14,10 @@ export async function getServerSideProps({ params }: GetServerSidePropsContext) 
 
   try {
     const {
-      data: { image, name, price, currency, description }
+      data: { image, name, price, currency, description, _id }
     } = await api.get<Product>(`/motorcycles/list/${slug}`);
     return {
-      props: { image, name, price, currency, description }
+      props: { image, name, price, currency, description, productId: _id }
     };
   } catch (error) {
     return {

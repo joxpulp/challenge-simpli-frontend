@@ -1,0 +1,6 @@
+.leadsFormBox {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-top: 10px;
+}

@@ -1,0 +1,31 @@
+.inputBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  .inputLabel {
+    color: var(--secondary-color);
+  }
+  .inputField {
+    border: 1px solid var(--soft-gray);
+    color: var(--dark-gray);
+    padding: 13px;
+    outline: none;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+  }
+  .inputField:disabled {
+    background-color: var(--disabled-gray);
+    border-color: var(--disabled-gray-2);
+    cursor: not-allowed;
+  }
+  .inputField::placeholder {
+    color: var(--soft-gray);
+  }
+  .inputField:focus {
+    border-color: var(--dark-gray);
+  }
+  .inputFieldError {
+    color: var(--red-error);
+  }
+}

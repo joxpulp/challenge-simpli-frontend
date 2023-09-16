@@ -5,11 +5,13 @@
   --secondary-color-offset: #7f53bc;
   --tertiary-color: #ededed;
   --white: #fff;
+  --white-offset: #ffffffb3;
   --black: #000;
   --soft-gray: #d4d8e1;
   --dark-gray: #767676;
   --disabled-gray: #f7f7f9;
   --disabled-gray-2: #b3bac9;
+  --red-error: #f03738;
 }
 
 * {
