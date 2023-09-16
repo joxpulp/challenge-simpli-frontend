@@ -9,7 +9,7 @@ function Motorcycles({ motorcycles }: { motorcycles: Product[] }) {
     <ProductContainer>
       <ProductContainerGrid>
         {motorcycles.map(motorcycle => (
-          <ProductCard key={motorcycle._id} imageUrl={motorcycle.image} buttonText="PEPE" title={motorcycle.name} subtitle={`$${motorcycle.price} ${motorcycle.currency}`} urlToGo={`/motorcycles/${motorcycle.slug}`} />
+          <ProductCard key={motorcycle._id} imageUrl={motorcycle.image} title={motorcycle.name} subtitle={`$${motorcycle.price} ${motorcycle.currency}`} urlToGo={`/motorcycles/${motorcycle.slug}`} />
         ))}
       </ProductContainerGrid>
     </ProductContainer>

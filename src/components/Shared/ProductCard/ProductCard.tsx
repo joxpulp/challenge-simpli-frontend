@@ -7,7 +7,6 @@ interface ProductCardProps {
   imageUrl: string;
   title: string;
   subtitle: string;
-  buttonText: string;
   urlToGo: string;
 }
 
