@@ -25,3 +25,11 @@ export interface ProductsPageSSRProps {
   currentPage: number;
   limit: number;
 }
+
+export interface ProductDetailSSRProps {
+  image: string;
+  name: string;
+  price: number;
+  currency: string;
+  description: string;
+}

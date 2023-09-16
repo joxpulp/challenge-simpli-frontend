@@ -9,7 +9,7 @@
 .productDetailContainerImage {
   position: relative;
   width: 100%;
-  height: 510px;
+  height: 410px;
 }
 
 .productDetailContainerItems {
@@ -39,6 +39,12 @@
   }
 }
 
+@media (max-width: 1226px) {
+  .productDetailContainerImage {
+    height: 380px;
+  }
+}
+
 @media (max-width: 1024px) {
   .productDetailContainer {
     margin-top: 40px;
@@ -48,7 +54,7 @@
 
 @media (max-width: 930px) {
   .productDetailContainerImage {
-    height: 410px;
+    height: 310px;
   }
 }
 
@@ -59,7 +65,7 @@
   }
 
   .productDetailContainerImage {
-    height: 510px;
+    height: 260px;
   }
 
   .productDetailContainerItems {
@@ -67,11 +73,5 @@
     .productDetailContainerButtons {
       gap: 10px;
     }
-  }
-}
-
-@media (max-width: 500px) {
-  .productDetailContainerImage {
-    height: 410px;
   }
 }
