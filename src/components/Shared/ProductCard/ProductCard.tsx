@@ -11,7 +11,7 @@ interface ProductCardProps {
   urlToGo: string;
 }
 
-function ProductCard({ imageUrl, title, subtitle, buttonText, urlToGo }: ProductCardProps) {
+function ProductCard({ imageUrl, title, subtitle, urlToGo }: ProductCardProps) {
   const router = useRouter();
 
   const handleGoToUrl = () => {
@@ -19,14 +19,14 @@ function ProductCard({ imageUrl, title, subtitle, buttonText, urlToGo }: Product
   };
 
   return (
-    <div className={styles.productCard}>
+    <div className={styles.productCard} onClick={handleGoToUrl}>
       <div className={styles.productCardImage}>
         <Image unoptimized src={imageUrl} fill alt="product image" style={{ objectFit: 'cover' }} />
       </div>
       <h1 className={styles.productCardTitle}>{title}</h1>
       <h3 className={styles.productCardSubtitle}>{subtitle}</h3>
       <Button onClick={handleGoToUrl} fullWidth>
-        {buttonText}
+        More Info
       </Button>
     </div>
   );
