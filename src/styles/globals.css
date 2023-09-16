@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #903ef7;
+  --secondary-color: #180a2a;
+  --white: #fff;
+  --black: #000;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,8 +13,15 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 1512px;
+  margin: auto;
   overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
