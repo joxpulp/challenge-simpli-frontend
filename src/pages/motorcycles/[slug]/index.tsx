@@ -13,9 +13,11 @@ export async function getServerSideProps({ params }: GetServerSidePropsContext) 
   const slug = params?.slug;
 
   try {
-    const { data: product } = await api.get<Product>(`/motorcycles/list/${slug}`);
+    const {
+      data: { image, name, price, currency, description }
+    } = await api.get<Product>(`/motorcycles/list/${slug}`);
     return {
-      props: { image: product.image, name: product.name, price: product.price, currency: product.currency, description: product.description }
+      props: { image, name, price, currency, description }
     };
   } catch (error) {
     return {
