@@ -3,6 +3,7 @@ import styles from './ProductDetailContainer.module.css';
 import Button from '../Button/Button';
 import { Exo } from 'next/font/google';
 import LeadsModal from './LeadsModal/LeadsModal';
+import productDetailContainerTexts from './texts';
 
 const exo = Exo({ subsets: ['latin'], weight: ['400'] });
 
@@ -30,12 +31,12 @@ function ProductDetailContainer({ imageUrl, title, price, currency, description,
         </div>
         <div className={styles.productDetailContainerButtons}>
           <Button fullWidth extraClass={`${exo.className}`}>
-            Purchase
+            {productDetailContainerTexts.PURCHASE_CTA}
           </Button>
           <LeadsModal productId={productId} productName={title} />
         </div>
         <div className={styles.productDetailContainerDescription}>
-          <h3>Description</h3>
+          <h3>{productDetailContainerTexts.DESCRIPTION_TITLE}</h3>
           <p>{description}</p>
         </div>
       </div>

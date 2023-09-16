@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Button from '../Button/Button';
 import styles from './Pagination.module.css';
+import paginationTexts from './texts';
 
 interface PaginationProps {
   totalPages: number;
@@ -61,7 +62,7 @@ function Pagination({ totalPages, currentPage, limit }: PaginationProps) {
   return (
     <div className={styles.paginationContainer}>
       <Button disabled={disabledPrev} onClick={handlePrev} buttonStyle="secondary">
-        Prev
+        {paginationTexts.PREV_CTA}
       </Button>
       {pageNumbers.map((pageNumber, index) => (
         <Button buttonStyle="tertiary" extraClass={`${pageNumber === currentPage && styles.active} ${styles.numbers}`} onClick={() => handlePagination(pageNumber)} key={index}>
@@ -69,7 +70,7 @@ function Pagination({ totalPages, currentPage, limit }: PaginationProps) {
         </Button>
       ))}
       <Button disabled={disabledNext} onClick={handleLast} buttonStyle="secondary">
-        Next
+        {paginationTexts.NEXT_CTA}
       </Button>
     </div>
   );

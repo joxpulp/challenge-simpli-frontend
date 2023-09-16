@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { LeadReponse } from '@/utils/types/leads.types';
 import { ProductTypeEnum } from '@/utils/enums/productType.enum';
+import leadsModalText from './texts';
 
 interface LeadsModalProps {
   productId: string;
@@ -66,12 +67,12 @@ function LeadsModal({ productId, productName }: LeadsModalProps) {
     <LeadsModalWrapper>
       <Formik initialValues={initialValues} validationSchema={schemaValidation} onSubmit={handleSubmit} validateOnChange validateOnBlur={false}>
         <Form className={styles.leadsFormBox}>
-          <Input disabled={loading} label="Name" inputName="name" placeholder="Your name" />
-          <Input disabled={loading} label="Lastname" inputName="lastname" placeholder="Your lastname" />
-          <Input disabled={loading} label="Email" inputName="email" placeholder="Your email" />
-          <Input disabled={loading} label="Phone" inputName="phone" placeholder="Your phone" />
+          <Input disabled={loading} label={leadsModalText.INPUTS.NAME.LABEL} inputName="name" placeholder={leadsModalText.INPUTS.NAME.PLACEHOLDER} />
+          <Input disabled={loading} label={leadsModalText.INPUTS.LASTNAME.LABEL} inputName="lastname" placeholder={leadsModalText.INPUTS.LASTNAME.PLACEHOLDER} />
+          <Input disabled={loading} label={leadsModalText.INPUTS.EMAIL.LABEL} inputName="email" placeholder={leadsModalText.INPUTS.EMAIL.PLACEHOLDER} />
+          <Input disabled={loading} label={leadsModalText.INPUTS.PHONE.LABEL} inputName="phone" placeholder={leadsModalText.INPUTS.PHONE.PLACEHOLDER} />
           <Button disabled={loading} type="submit" buttonStyle="secondary">
-            Submit
+            {leadsModalText.LEADS_CTA}
           </Button>
         </Form>
       </Formik>
