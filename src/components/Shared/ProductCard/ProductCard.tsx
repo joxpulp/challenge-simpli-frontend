@@ -21,7 +21,7 @@ function ProductCard({ imageUrl, title, subtitle, urlToGo }: ProductCardProps) {
   return (
     <div className={styles.productCard} onClick={handleGoToUrl}>
       <div className={styles.productCardImage}>
-        <Image priority unoptimized src={imageUrl} fill alt="product image" style={{ objectFit: 'cover' }} />
+        <Image priority unoptimized src={imageUrl} fill alt="product image" style={{ objectFit: 'contain' }} />
       </div>
       <h1 className={styles.productCardTitle}>{title}</h1>
       <h3 className={styles.productCardSubtitle}>{subtitle}</h3>

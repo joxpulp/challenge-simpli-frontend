@@ -19,7 +19,19 @@ export default function middleware(req: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  if (url.pathname.startsWith('/accessories') && !url.pathname.includes('/accessories/') && (!url.searchParams.has('page') || !url.searchParams.has('limit'))) {
+    url.searchParams.set('page', '1');
+    url.searchParams.set('limit', '8');
+    return NextResponse.redirect(url);
+  }
+
   if (url.pathname.startsWith('/motorcycles') && !url.pathname.includes('/motorcycles/') && (!url.searchParams.get('page') || !url.searchParams.get('limit'))) {
+    url.searchParams.set('page', '1');
+    url.searchParams.set('limit', '8');
+    return NextResponse.redirect(url);
+  }
+
+  if (url.pathname.startsWith('/accessories') && !url.pathname.includes('/accessories/') && (!url.searchParams.get('page') || !url.searchParams.get('limit'))) {
     url.searchParams.set('page', '1');
     url.searchParams.set('limit', '8');
     return NextResponse.redirect(url);
