@@ -8,7 +8,7 @@ function Footer() {
     <div className={styles.footerContainer}>
       <div className={styles.footerSubContainer}>
         <div className={styles.footerLogo}>
-          <Image unoptimized src="/simplimuv-white.png" fill style={{ objectFit: 'cover', position: 'absolute' }} alt="simpli logo" />
+          <Image src="/simplimuv-white.png" fill style={{ objectFit: 'cover', position: 'absolute' }} alt="simpli logo" />
         </div>
         <div className={styles.footerSocials}>
           <RiFacebookBoxLine size={25} className={styles.footerSocialsLink} />
