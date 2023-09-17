@@ -20,8 +20,20 @@ npm i
 npm run dev
 ```
 
+- To build the app:
+
+```bash
+npm run build
+```
+
+- To start the app:
+
+```bash
+npm run start
+```
+
 - There is an .env.sample file, containing the environment variable to interact with the API:
-- This project uses Typescript, ESLint, Prettier, Husky and Lint-staged
+- This project uses Typescript, NextJS, ESLint, Prettier, Formik, Yup, Axios, Husky and Lint-staged
 - Husky and lint-staged are used to run ESLint and prettier with a pre-commit hook, if there is an actual error the commit is aborted.
 - This project uses SSR as a rendering strategy
 
