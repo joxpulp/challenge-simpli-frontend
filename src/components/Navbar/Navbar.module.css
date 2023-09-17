@@ -1,8 +1,9 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0px;
-  margin-bottom: 30px;
+  max-width: 1512px;
+  margin: 0 auto;
+  padding: 10px 50px;
 }
 
 .navbarLogoMenu {
@@ -52,7 +53,16 @@
   color: var(--primary-color);
 }
 
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 30px;
+  }
+}
+
 @media (max-width: 750px) {
+  .navbar {
+    padding: 10px 20px;
+  }
   .navbarMobileMenuIcon {
     display: block;
     cursor: pointer;
@@ -67,7 +77,7 @@
     height: 0px;
     gap: 0px;
     background-color: var(--white);
-    top: 80px;
+    top: 70px;
     left: 0;
     position: absolute;
     flex-direction: column;
@@ -93,5 +103,11 @@
         background-color: var(--primary-color);
       }
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 10px 16px;
   }
 }

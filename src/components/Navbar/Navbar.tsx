@@ -12,7 +12,6 @@ import { useRouter } from 'next/router';
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const router = useRouter();
-  console.log(router.pathname);
 
   const handleOpen = () => {
     setOpenMenu(true);

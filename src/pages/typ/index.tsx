@@ -1,4 +1,4 @@
-import ThankYouPageContainer from '@/components/ThankYouPage/ThankYouPageContainer';
+import ThankYouPageContainer from '@/components/ThankYouPageContainer/ThankYouPageContainer';
 import { api } from '@/utils/api/api';
 import { ProductTypeEnum } from '@/utils/enums/productType.enum';
 import { LeadReponse } from '@/utils/types/leads.types';
