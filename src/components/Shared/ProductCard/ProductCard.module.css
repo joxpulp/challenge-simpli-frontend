@@ -11,17 +11,20 @@
   user-select: none;
   text-align: center;
   box-shadow: 0px 0px 5px 3px rgba(130, 130, 130, 0.183);
-  .productCardImage {
-    position: relative;
-    width: 100%;
-    height: 150px;
-  }
-  .productCardTitle {
-    font-size: 17px;
-  }
-  .productCardSubtitle {
-    font-size: 15px;
-  }
+}
+
+.productCardImage {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.productCardTitle {
+  font-size: 17px;
+}
+
+.productCardSubtitle {
+  font-size: 15px;
 }
 
 .productCard:hover {
@@ -29,25 +32,19 @@
 }
 
 @media (max-width: 1300px) {
-  .productCard {
-    .productCardImage {
-      height: 120px;
-    }
+  .productCardImage {
+    height: 120px;
   }
 }
 
 @media (max-width: 750px) {
-  .productCard {
-    .productCardImage {
-      height: 140px;
-    }
+  .productCardImage {
+    height: 140px;
   }
 }
 
 @media (max-width: 500px) {
-  .productCard {
-    .productCardImage {
-      height: 200px;
-    }
+  .productCardImage {
+    height: 200px;
   }
 }

@@ -29,12 +29,10 @@
   gap: 30px;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
+}
 
-  .links {
-    &.active {
-      color: var(--primary-color);
-    }
-  }
+.active {
+  color: var(--primary-color);
 }
 
 .navbarIcons {
@@ -63,6 +61,7 @@
   .navbar {
     padding: 10px 20px;
   }
+
   .navbarMobileMenuIcon {
     display: block;
     cursor: pointer;
@@ -81,28 +80,31 @@
     left: 0;
     position: absolute;
     flex-direction: column;
+  }
 
-    &.open {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      height: 140px;
-    }
-    .list {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      transition: all 0.2s ease-in-out;
-      .links {
-        width: 100%;
-        padding: 20px 10px;
-        border-radius: 4px;
-        text-align: center;
-      }
-      .links:hover {
-        color: var(--white);
-        background-color: var(--primary-color);
-      }
-    }
+  .open {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 140px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .links {
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .links:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
   }
 }
 
