@@ -26,11 +26,6 @@
   opacity: 0.7;
 }
 
-.productDetailContainerButtons {
-  display: flex;
-  gap: 20px;
-}
-
 .productDetailContainerDescription {
   display: flex;
   flex-direction: column;
@@ -73,9 +68,5 @@
 
   .productDetailContainerItems {
     width: 100%;
-  }
-
-  .productDetailContainerButtons {
-    gap: 10px;
   }
 }

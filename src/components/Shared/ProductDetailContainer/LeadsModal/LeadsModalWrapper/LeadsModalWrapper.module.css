@@ -42,6 +42,12 @@
   cursor: pointer;
 }
 
+@media (max-width: 500px) {
+  .leadsModalWrapperButtonMobile {
+    width: 100%;
+  }
+}
+
 @keyframes overlayShow {
   from {
     opacity: 0;

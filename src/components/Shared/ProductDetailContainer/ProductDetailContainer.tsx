@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styles from './ProductDetailContainer.module.css';
-import Button from '../Button/Button';
 import { Exo } from 'next/font/google';
 import LeadsModal from './LeadsModal/LeadsModal';
 import productDetailContainerTexts from './texts';
@@ -34,12 +33,7 @@ function ProductDetailContainer({ imageUrl, title, price, currency, description,
             {currency.toUpperCase()} {price}
           </h4>
         </div>
-        <div className={styles.productDetailContainerButtons}>
-          <Button fullWidth extraClass={`${exo.className}`}>
-            {productDetailContainerTexts.PURCHASE_CTA}
-          </Button>
-          <LeadsModal productId={productId} productName={title} />
-        </div>
+        <LeadsModal productId={productId} productName={title} />
         <div className={styles.productDetailContainerDescription}>
           <h3>{productDetailContainerTexts.DESCRIPTION_TITLE}</h3>
           <p>{description}</p>

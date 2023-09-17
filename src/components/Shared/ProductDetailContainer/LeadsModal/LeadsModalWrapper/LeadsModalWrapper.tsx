@@ -12,7 +12,7 @@ function LeadsModalWrapper({ children }: ChildrenProp) {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild className={styles.leadsModalWrapperButton}>
-        <Button fullWidth extraClass={`${exo.className}`} buttonStyle="secondary">
+        <Button extraClass={`${exo.className} ${styles.leadsModalWrapperButtonMobile}`} buttonStyle="secondary">
           {leadsModalWrapperTexts.MORE_INFO_CTA}
         </Button>
       </Dialog.Trigger>
