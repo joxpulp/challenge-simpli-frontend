@@ -1,6 +1,12 @@
 ### SimpliMuv Fullstack challenge
 
-## Getting Started
+## Local Setup:
+
+- Clone the project
+
+```bash
+  git clone https://github.com/joxpulp/challenge-simpli-frontend.git
+```
 
 - Install packages using:
 
