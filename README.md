@@ -1,5 +1,7 @@
 ### SimpliMuv Fullstack challenge
 
+[Live APP](https://simplimuv.joxpulp.com/)
+
 ## Local Setup:
 
 - Clone the project
