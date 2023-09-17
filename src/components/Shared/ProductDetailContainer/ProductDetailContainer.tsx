@@ -4,6 +4,8 @@ import Button from '../Button/Button';
 import { Exo } from 'next/font/google';
 import LeadsModal from './LeadsModal/LeadsModal';
 import productDetailContainerTexts from './texts';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const exo = Exo({ subsets: ['latin'], weight: ['400'] });
 
@@ -17,6 +19,8 @@ interface ProductDetailContainerProps {
 }
 
 function ProductDetailContainer({ imageUrl, title, price, currency, description, productId }: ProductDetailContainerProps) {
+  const router = useRouter();
+
   return (
     <div className={`${styles.productDetailContainer} ${exo.className}`}>
       <div className={styles.productDetailContainerImage}>
@@ -24,6 +28,7 @@ function ProductDetailContainer({ imageUrl, title, price, currency, description,
       </div>
       <div className={styles.productDetailContainerItems}>
         <div className={styles.productDetailContainerHeader}>
+          <Link href={router.pathname.replace('/[slug]', '')}>{productDetailContainerTexts.BACK_TO_CATALOG}</Link>
           <h1>{title}</h1>
           <h4>
             {currency.toUpperCase()} {price}
